@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script validasi isian form</title>
+</head>
+<body>
+    
+    <header>
+    <style>
+        form p > label {
+            display: inline-block;
+            width: 130px;
+        }
+        form input [type="text"],form textarea{
+            border: 1px solid #197a43;
+        }
+        form input[type="submit"] {
+            border: 1px solid #197a43;
+            background-color: #8a1430;
+            color: #ffffff;
+            font-weight: bold;
+            padding: 5px 15px;
+        }
+        form fieldset{
+            margin-left: 5px;
+            margin-right: 5px;
+            border: 10px solid #28087b;
+        }
+        form legend{
+            margin-left: 20px;
+        }
+        form label {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-bottom: 5;
+        }
+    </style>
+    </header>
+    <form action="proses.php" method="post">
+        <fieldset>
+             <legend>Biodata Diri</legend>
+            <p>
+                <label for="nama">Nama  :</label>
+                <input type="text" id="nama" name="nama">
+            </p>
+            <p>
+                <label>Umur :</label>
+                <input type="number" min="1" max="100" name="umur">
+            </p>
+            <P>
+                <label>Tanggal Lahir :</label>
+                <input type="date" name="date">
+            </P>
+            <p>
+                <label>E-Mail</label>
+                <input type="email" name="email">
+            </p>
+            <p>
+                <label for="alamat">Alamat :</label>
+                <textarea type="text" name="nama" cols="25" rows="3"></textarea>
+            </p>
+            <p>
+                <label>Jenis Kelamin</label>
+                <input id="jk_1" type="radio" name="kelamin" value="L"/>
+                <label for="jk_1">laki-laki</label>
+                <input id="jk_p" type="radio" name="kelamin" value="P"/>
+                <label for="jk_p">Perempuan</label>        
+            </p>
+            <p><input type="submit" value="Submit"></p>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
